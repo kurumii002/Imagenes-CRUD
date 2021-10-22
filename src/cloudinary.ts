@@ -45,5 +45,7 @@ export function uploadToCloudinary() {
  * @param public_id 
  */
 export async function deleteImage(public_id: string) {
-	cloudinary.v2.uploader.destroy(public_id, { resource_type: "image" }, (error, result) => console.log(result, error));
+	cloudinary.v2.uploader.destroy(public_id, { resource_type: "image" }, 
+		(error, result) => console.log(result, error)
+	);
 }
